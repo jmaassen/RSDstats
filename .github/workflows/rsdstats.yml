@@ -1,4 +1,4 @@
-# This workflow will run fairtally on the RSD data once an hour and push the results to the repo
+# This workflow will run rsdstats on the RSD data once an hour and push the results to the repo
 #
 # TODO:
 
@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  fairtally:
+  rsdstats:
 
     runs-on: ubuntu-latest
 
@@ -24,7 +24,7 @@ jobs:
           java-version: '21'
 
       - name: Install gnuplot
-        run: sudo apt-get install -y gnuplot
+        run: sudo apt-get install -y gnuplot ttf-mscorefonts-installer fontconfig & sudo fc-cache -f -v
 
       - name: Run stats
         run: /bin/bash plot-stats.sh
