@@ -1,4 +1,6 @@
 #!/bin/bash
+date '+%Y%m%d-%H%M' >> lastrun.txt
+
 java -cp ./target/rsd-0.1-jar-with-dependencies.jar nl.esciencecenter.rsd.Main nlesc https://research.software
 echo "Plotting nlesc graphs"
 gnuplot < users-nlesc.gnuplot
