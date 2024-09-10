@@ -25,7 +25,7 @@ jobs:
           java-version: '21'
 
       - name: Install gnuplot
-        run: sudo apt-get install -y gnuplot-nox
+        run: sudo apt-get install -y gnuplot-nox gsfonts
 
       - name: Run stats
         run: /bin/bash plot-stats.sh
