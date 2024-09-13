@@ -1,6 +1,6 @@
 set terminal png size 1200,600 enhanced font "Helvetica,12"
 set output 'users-helmholtz.png'
-set title "Registered RSD users (HH)"
+set title "Registered RSD users (Helmholtz)"
 set boxwidth 0.5
 set style fill solid
 set yrange [0:]
