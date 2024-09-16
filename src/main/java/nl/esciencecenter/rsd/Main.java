@@ -4,6 +4,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
 import java.util.Arrays;
+import java.time.YearMonth;
+import java.time.LocalDate;
+
 import com.google.gson.Gson;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -12,9 +15,9 @@ import java.net.http.HttpResponse;
 public class Main {
 	
 	public static final int startYear = 2022;
-	public static final int endYear = 2024;
+	//public static final int endYear = 2024;
 	public static final int startMonth = 7;
-	public static final int endMonth = 9;
+	//public static final int endMonth = 10;
 	
 	public static final String [][] RSDs = { { "nlesc", "https://research.software" }, { "helmholtz", "https://helmholtz.software" } };
 	
@@ -123,6 +126,10 @@ public class Main {
 		
 		int index = 0;
 
+		int endDay = LocalDate.now().getDayOfMonth();
+		int endMonth = LocalDate.now().getMonthValue();
+		int endYear = LocalDate.now().getYear();
+				
 		StringBuffer output = new StringBuffer();
 
 		for (int y=startYear;y<=2024;y++) {
@@ -138,6 +145,9 @@ public class Main {
 				}
 			}
 		}
+		
+		date = Integer.toString(endYear) + "-" + Integer.toString(endMonth) + "-" + Integer.toString(endDay+1);
+		output.append(index++ + " " + date + " " + overall + "\n");
 		
 		writeFile("users-" + name + ".data", output.toString());
 		return overall;
