@@ -3,7 +3,7 @@ set output 'users-nlesc.png'
 set title "Registered RSD users (NLESC)"
 set boxwidth 0.5
 set style fill solid
-set yrange [0:]
+set yrange [0:350]
 set grid ytics
 set xtics out 
 set xtics rotate by -45
