@@ -72,6 +72,10 @@ public class Main {
 		return response.body();
 	}
 	
+	private static String replaceWhitespace(String in) { 
+		return in.replaceAll("\\s+", "-");
+	}
+
 	private static void getOrgStatistics(String name, String base, int overall) {
 		
 		System.out.println("Retrieving ORG stats for " + name);
@@ -106,7 +110,7 @@ public class Main {
 		StringBuffer output = new StringBuffer();
 		
 		for (int i=0;i<stats.length;i++) {
-			output.append(i + " " + stats[i].home_organisation + " " + stats[i].count + "\n");
+			output.append(i + " " + replaceWhitespace(stats[i].home_organisation) + " " + stats[i].count + "\n");
 		}
 	
 		writeFile("org-" + name + ".data", output.toString());
