@@ -3,7 +3,7 @@ set output 'users-helmholtz.png'
 set title "Registered RSD users (Helmholtz)"
 set boxwidth 0.5
 set style fill solid
-set yrange [0:700]
+set yrange [0:750]
 set grid ytics
 set xtics out
 set xtics rotate by -45
