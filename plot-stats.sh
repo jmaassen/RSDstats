@@ -21,7 +21,7 @@ echo "Plotting veda graphs"
 gnuplot < users-veda.gnuplot
 gnuplot < orgs-veda.gnuplot
 
-java -cp ./target/rsd-0.1-jar-with-dependencies.jar nl.esciencecenter.rsd.Main koeln https://research-software.cceh.uni-koeln.de/
+java -cp ./target/rsd-0.1-jar-with-dependencies.jar nl.esciencecenter.rsd.Main koeln https://research-software.cceh.uni-koeln.de
 echo "Plotting koeln graphs"
 gnuplot < users-koeln.gnuplot
 gnuplot < orgs-koeln.gnuplot
