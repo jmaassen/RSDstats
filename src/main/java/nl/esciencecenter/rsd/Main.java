@@ -55,6 +55,9 @@ public class Main {
 	}
 	
 	public static String get(String uri) {
+
+		System.out.println("Connecting to: " + uri);
+
 		HttpRequest request = HttpRequest.newBuilder()
 				.GET()
 				.uri(URI.create(uri))
@@ -136,7 +139,7 @@ public class Main {
 				
 		StringBuffer output = new StringBuffer();
 
-		for (int y=startYear;y<=2025;y++) {
+		for (int y=startYear;y<=endYear;y++) {
 		
 			for (int m=1;m<12;m++) { 
 				
