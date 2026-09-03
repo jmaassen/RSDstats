@@ -3,7 +3,7 @@ set output 'users-nfdi.png'
 set title "Registered RSD users (NFDI)"
 set boxwidth 0.5
 set style fill solid
-set yrange [0:50]
+set yrange [0:]
 set grid ytics
 set xtics out 
 set xtics rotate by -45

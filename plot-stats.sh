@@ -21,6 +21,11 @@ echo "Plotting veda graphs"
 gnuplot < users-veda.gnuplot
 gnuplot < orgs-veda.gnuplot
 
+java -cp ./target/rsd-0.1-jar-with-dependencies.jar nl.esciencecenter.rsd.Main imperial https://imperial.software
+echo "Plotting imperial graphs"
+gnuplot < users-imperial.gnuplot
+gnuplot < orgs-imperial.gnuplot
+
 # java -cp ./target/rsd-0.1-jar-with-dependencies.jar nl.esciencecenter.rsd.Main koeln https://research-software.cceh.uni-koeln.de
 # echo "Plotting koeln graphs"
 # gnuplot < users-koeln.gnuplot

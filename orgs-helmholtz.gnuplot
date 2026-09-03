@@ -1,6 +1,6 @@
 set terminal png size 1200,600 enhanced font "Helvetica,12"
 set output 'orgs-helmholtz.png'
-set title "RSD Users per organization (HH)"
+set title "RSD Users per organization (Helmholtz)"
 set boxwidth 0.5
 set style fill solid
 set offsets 0, 0, 10, 0
